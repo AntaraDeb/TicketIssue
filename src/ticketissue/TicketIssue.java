@@ -4,9 +4,15 @@ package ticketissue;
 
 public class TicketIssue {
     public static void main (String [] args) {
-        int speed= Integer.parseInt(args[0]);
-        boolean isBirthday = Boolean.parseBoolean(args[1]);
-        issueTicket(speed, isBirthday);
+        try{
+            int speed= Integer.parseInt(args[0]);
+            boolean isBirthday = Boolean.parseBoolean(args[1]);
+            issueTicket(speed, isBirthday);
+        }
+        catch(Exception e){
+            System.out.println("Proper arguments are not passed");
+        }
+       
     }
     static void issueTicket(int speed, boolean isBirthday){
         int relaxation=0;
